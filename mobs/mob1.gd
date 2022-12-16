@@ -1,27 +1,23 @@
 extends KinematicBody2D
 
-signal change_direction(new_direction)
+signal set_target(target)
 
-var speed: int = 10
-var isRight: bool = false
+var agent: NavigationAgent2D
 
-var direction: String = "down"
+var velocity: Vector2 = Vector2.ZERO
+var speed: int = 1000
 
 func _ready():
-	pass
+	agent = $NavigationAgent2D
 
 func _physics_process(delta):
-	var vector = Vector2.ZERO
-	if direction == "down":
-		vector = Vector2.DOWN
-	elif direction == "left":
-		vector = Vector2.LEFT
-	elif direction == "right":
-		vector = Vector2.RIGHT
-	elif direction == "up":
-		vector = Vector2.UP
+	var direction = position.direction_to(agent.get_next_location())
 	
-	move_and_collide(vector * speed * delta)
+	var desired_velocity = direction * speed
+	var steering = (desired_velocity - velocity) * delta
+	velocity = steering
+	
+	velocity = move_and_slide(velocity)
 
-func _on_Mob1_change_direction(new_direction: String):
-	direction = new_direction
+func _on_Mob1_set_target(target: Vector2):
+	agent.set_target_location(target)

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Tower 06 - Level 02 - Weapon.png-25e9a8780e73de834b2329b5900a4303.stex"
+path="res://.import/Tower 06 - Level 02 - Weapon.png-f9513ec52efda222dbbdf26443b22c26.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/2d/towers/tower6/Tower 06 - Level 02 - Weapon.png"
-dest_files=[ "res://.import/Tower 06 - Level 02 - Weapon.png-25e9a8780e73de834b2329b5900a4303.stex" ]
+source_file="res://assets/2d/towers/Tower6/Tower 06 - Level 02 - Weapon.png"
+dest_files=[ "res://.import/Tower 06 - Level 02 - Weapon.png-f9513ec52efda222dbbdf26443b22c26.stex" ]
 
 [params]
 

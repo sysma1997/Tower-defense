@@ -55,4 +55,4 @@ shape = SubResource( 5 )
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
 
-[connection signal="change_direction" from="." to="." method="_on_Mob1_change_direction"]
+[connection signal="set_target" from="." to="." method="_on_Mob1_set_target"]

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Tower 05.png-6e1f5e82254cbc26d321cf0439583ce6.stex"
+path="res://.import/Tower 05.png-40db8bda26730bf4c350d69c3d2f5b18.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/2d/towers/tower5/Tower 05.png"
-dest_files=[ "res://.import/Tower 05.png-6e1f5e82254cbc26d321cf0439583ce6.stex" ]
+source_file="res://assets/2d/towers/Tower5/Tower 05.png"
+dest_files=[ "res://.import/Tower 05.png-40db8bda26730bf4c350d69c3d2f5b18.stex" ]
 
 [params]
 

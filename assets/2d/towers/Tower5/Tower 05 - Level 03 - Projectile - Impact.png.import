@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Tower 05 - Level 03 - Projectile - Impact.png-264d3ccc3d41b2fd46edd3ce56e7735d.stex"
+path="res://.import/Tower 05 - Level 03 - Projectile - Impact.png-a1552227aa1bc9d5cfb136589ec1c671.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/2d/towers/tower5/Tower 05 - Level 03 - Projectile - Impact.png"
-dest_files=[ "res://.import/Tower 05 - Level 03 - Projectile - Impact.png-264d3ccc3d41b2fd46edd3ce56e7735d.stex" ]
+source_file="res://assets/2d/towers/Tower5/Tower 05 - Level 03 - Projectile - Impact.png"
+dest_files=[ "res://.import/Tower 05 - Level 03 - Projectile - Impact.png-a1552227aa1bc9d5cfb136589ec1c671.stex" ]
 
 [params]
 

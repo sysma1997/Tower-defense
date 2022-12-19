@@ -12,6 +12,7 @@ func _ready():
 
 func _physics_process(delta):
 	var direction = position.direction_to(agent.get_next_location())
+	print("mob direction ", direction)
 	
 	var desired_velocity = direction * speed
 	var steering = (desired_velocity - velocity) * delta
@@ -19,5 +20,8 @@ func _physics_process(delta):
 	
 	velocity = move_and_slide(velocity)
 
-func _on_Mob1_set_target(target: Vector2):
+func set_target(target: Vector2):
 	agent.set_target_location(target)
+
+func start_position(position: Vector2):
+	global_position = position

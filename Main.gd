@@ -5,7 +5,7 @@ var last_camera_position: Vector2
 var moving_force: int = 0
 
 func _ready():
-	pass
+	$Map1.emit_signal("generate_mobs", 1)
 
 func _physics_process(delta):
 	if camera_position == null or camera_position == Vector2.ZERO:

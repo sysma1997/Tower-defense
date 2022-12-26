@@ -5,7 +5,7 @@ var last_camera_position: Vector2
 var moving_force: int = 0
 
 func _ready():
-	$Map1.emit_signal("generate_mobs", 1)
+	pass
 
 func _physics_process(delta):
 	if camera_position == null or camera_position == Vector2.ZERO:
@@ -27,3 +27,10 @@ func _input(event):
 		moving_force = clamp(abs(position.y - last_camera_position.y), 30, 100)
 		
 		last_camera_position = position
+
+
+func _on_Timer_timeout():
+	if $Map1.get_mobs_sizes() >= 5:
+		return
+	
+	$Map1.emit_signal("generate_mobs", 1)

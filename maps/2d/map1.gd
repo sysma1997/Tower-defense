@@ -16,3 +16,9 @@ func _on_Map1_generate_mobs(length):
 		mob.set_target($Navegation/Sanctuaries/Sanctuary1.position)
 		
 		$Navegation/Mobs.add_child(mob)
+
+func get_mobs_sizes():
+	return $Navegation/Mobs.get_child_count()
+
+func _on_Sanctuary1_destroy():
+	$Navegation/Sanctuaries/Sanctuary1.queue_free()

@@ -8,6 +8,7 @@ var velocity: Vector2 = Vector2.ZERO
 var speed: int = 6000
 
 var is_attack: bool = false
+var damage: int = 1
 var sanctuary_target_attack: Node2D
 
 func _ready():
@@ -24,9 +25,10 @@ func _physics_process(delta):
 
 func set_target(target: Vector2):
 	agent.set_target_location(target)
-
 func start_position(position: Vector2):
 	global_position = position
+func set_damage(_damage: int):
+	damage = _damage
 
 
 func _on_Damage_range_body_entered(body: Node2D):
@@ -44,4 +46,4 @@ func _on_Timer_timeout():
 	if !is_attack:
 		return
 	
-	sanctuary_target_attack.emit_signal("take_damage", 1)
+	sanctuary_target_attack.emit_signal("take_damage", damage)

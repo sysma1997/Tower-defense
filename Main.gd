@@ -33,4 +33,4 @@ func _on_Timer_timeout():
 	if $Map1.get_mobs_sizes() >= 5:
 		return
 	
-	$Map1.emit_signal("generate_mobs", 1)
+	$Map1.emit_signal("generate_mobs", 1, $Map1.get_mobs_sizes() + 1)

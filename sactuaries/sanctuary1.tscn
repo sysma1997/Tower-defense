@@ -29,4 +29,23 @@ frames = SubResource( 2 )
 position = Vector2( -0.5, 7 )
 shape = SubResource( 3 )
 
+[node name="ControlUI" type="Control" parent="."]
+margin_left = -20.0
+margin_top = -34.0
+margin_right = 19.0
+margin_bottom = -31.0
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Background" type="ColorRect" parent="ControlUI"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 1, 0, 0, 1 )
+
+[node name="Health" type="ColorRect" parent="ControlUI"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 1, 0, 1 )
+
 [connection signal="take_damage" from="." to="." method="_on_Sanctuary1_take_damage"]

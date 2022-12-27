@@ -1,19 +1,20 @@
 extends Node2D
 
-signal generate_mobs(length)
+signal generate_mobs(length, damage)
 
 var mobScene: PackedScene
 
 func _ready():
 	mobScene = ResourceLoader.load("res://mobs/mob1.tscn") as PackedScene
 
-func _on_Map1_generate_mobs(length):
+func _on_Map1_generate_mobs(length, damage):
 	for i in length:
 		var mob = mobScene.instance()
 		
 		mob._ready()
 		mob.start_position($Navegation/GeneratorMobs.position)
 		mob.set_target($Navegation/Sanctuaries/Sanctuary1.position)
+		mob.set_damage(damage)
 		
 		$Navegation/Mobs.add_child(mob)
 
